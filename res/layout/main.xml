@@ -5,8 +5,119 @@
     android:orientation="vertical" >
 
     <TextView
-        android:layout_width="fill_parent"
+        android:id="@+id/tv_tag_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:text="Tag ID"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:text="Normal Distribution"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Mean (µ)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=" and "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Standard deviation (σ)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/blue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            style="@style/textview_std_surrounding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N(" />
+
+        <TextView
+            android:id="@+id/tv_std_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NUM"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/orange" />
+
+        <TextView
+            style="@style/textview_std_surrounding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="," />
+
+        <TextView
+            android:id="@+id/tv_std_deviation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NUM"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/blue" />
+
+        <TextView
+            style="@style/textview_std_surrounding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="n = "
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tv_std_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NUM"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="26dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" >
+    </ListView>
 
 </LinearLayout>
